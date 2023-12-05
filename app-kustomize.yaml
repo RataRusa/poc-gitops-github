@@ -4,7 +4,7 @@ metadata:
   name: clh-apps
 spec:
   destination:
-    namespace: clh-poc
+    namespace: poc-clh-3
     server: https://kubernetes.default.svc
   project: default
   source:

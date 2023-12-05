@@ -5,7 +5,7 @@ metadata:
 spec:
   destination:
     name: ''
-    namespace: poc-clh-2
+    namespace: poc-clh-3
     server: 'https://kubernetes.default.svc'
   source:
     path: ''
