@@ -2,12 +2,15 @@ apiVersion: route.openshift.io/v1
 kind: Route
 metadata:
   labels:
-    app: bgd
-  name: bgd
+    app: bgd-1
+  name: bgd-1
 spec:
   port:
     targetPort: 8080
   to:
     kind: Service
-    name: bgd
+    name: bgd-1
     weight: 100
+  tls:
+    termination: edge
+  wildcardPolicy: None

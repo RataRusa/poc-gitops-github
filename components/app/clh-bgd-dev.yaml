@@ -1,0 +1,23 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: clh-apps-dev
+  namespace: openshift-gitops
+spec:
+  destination:
+    namespace: bgd-dev
+    server: https://kubernetes.default.svc
+  project: default
+  sources:
+    - path: bgd/overlays/dev
+      repoURL: https://github.com/mcaballol/poc-gitops-github.git
+      targetRevision: main
+    - path: bgd-1/overlays/dev
+      repoURL: https://github.com/mcaballol/poc-gitops-github.git
+      targetRevision: main
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: false
+    syncOptions:
+    - CreateNamespace=true

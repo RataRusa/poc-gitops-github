@@ -1,14 +1,15 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
-- ../base
+- ../../base
+- ns.yaml
 patches:
 - patch: |-
     - op: replace
       path: /spec/template/spec/containers/0/env/0/value
-      value: red
+      value: gold
   target:
     group: apps
     kind: Deployment
-    name: bgd-2
+    name: bgd
     version: v1

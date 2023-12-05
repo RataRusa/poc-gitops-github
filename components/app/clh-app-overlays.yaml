@@ -8,8 +8,8 @@ spec:
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: app1/environment
-    repoURL: https://github.com/RataRusa/poc-gitops-github.git
+    path: components/overlays
+    repoURL: https://github.com/mcaballol/poc-gitops-github.git
     targetRevision: main
   syncPolicy:
     automated:
