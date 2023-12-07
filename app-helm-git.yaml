@@ -13,7 +13,7 @@ spec:
     targetRevision: main
     helm:
       valueFiles:
-        - values-prod.yaml
+        - env/values-prod.yaml
   sources: []
   project: default
   syncPolicy:
