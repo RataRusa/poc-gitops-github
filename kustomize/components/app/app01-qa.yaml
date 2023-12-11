@@ -5,11 +5,11 @@ metadata:
   namespace: openshift-gitops
 spec:
   destination:
-    namespace: bgd-qa
+    namespace: app01-qa
     server: https://kubernetes.default.svc
   project: default
   sources:
-    - path: bgd/overlays/qa
+    - path: app01/overlays/qa
       repoURL: https://github.com/mcaballol/poc-gitops-github.git
       targetRevision: main
 
